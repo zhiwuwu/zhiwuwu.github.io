@@ -10,7 +10,7 @@
 			overflow:hidden;
 		}
 		.section1{
-			background:#e6e6e6 url(img/bg-sun.png) no-repeat center top;
+			background:#e6e6e6 url(../img/bg-sun.png) no-repeat center top;
 		}
 		.section2{
 			background: #fff;
@@ -52,8 +52,6 @@
 			
 		}
 		#nav ul li .resume{
-			
-<<<<<<< HEAD
 		}
 
 		#mouse{
@@ -93,6 +91,5 @@
   100% {
     top: 16px;
     opacity: 0; } }
-=======
 		}
->>>>>>> a575b19eafbaa1b16464338bafe1f82094144241
+
