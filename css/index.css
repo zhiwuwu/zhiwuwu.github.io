@@ -19,7 +19,10 @@
 			background:linear-gradient(rgba(40,42,57,1),rgba(51,54,73,1));
 			overflow: hidden;
 			position: relative; 
+<<<<<<< HEAD
 			*background:rgb(40,42,57);
+=======
+>>>>>>> 744209bae077e578d2854e005c1f1872283bf315
 		}
 		.section2 .title{
 			position: relative;
@@ -37,6 +40,7 @@
 		}
 		.section2 .conten{
 			position: absolute;
+<<<<<<< HEAD
 			left: 50%;
 			top: 60%;
 			transform: translate(-50%,-50%);
@@ -53,14 +57,29 @@
 		}
 		.section2 .conten1 p,.conten2 p,.conten3 p,.conten4 p{
 			white-space: nowrap;
+=======
+			top:50%;
+			left: 18%;
+
+		}
+		.section2 .conten1,.conten2,.conten3,.conten4{
+			float: left;
+			padding-top: 180px;
+			width: 201px;
+			margin-right: 80px;
+			color: #fff;
+>>>>>>> 744209bae077e578d2854e005c1f1872283bf315
 		}
 		.section2 .conten1 h3,.conten2 h3,.conten3 h3,.conten4 h3{
 			margin-top: 10px;
 			font-size: 23px;
 			font-weight: 100;
 			margin-bottom: 20px;
+<<<<<<< HEAD
 			padding-right: 40px;
 			white-space: nowrap;
+=======
+>>>>>>> 744209bae077e578d2854e005c1f1872283bf315
 		}
 		.section2 .conten1{
 			background: url(../img/bg21.png) no-repeat top ;
