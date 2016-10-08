@@ -12,17 +12,24 @@
 		.section1{
 			background:#e6e6e6 url(../img/bg-sun.png) no-repeat center top;
 		}
+		.section1 .box{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+		}
+		.section1 .box h1{
+			font-size: 24px;
+			margin:50px 0;
+		}
 		.section2{
 			background:-webkit-linear-gradient(rgba(40,42,57,1),rgba(51,54,73,1));
 			background:-moz-linear-gradient(rgba(40,42,57,1),rgba(51,54,73,1));
 			background:-o-linear-gradient(rgba(40,42,57,1),rgba(51,54,73,1));
 			background:linear-gradient(rgba(40,42,57,1),rgba(51,54,73,1));
 			overflow: hidden;
-			position: relative; 
-<<<<<<< HEAD
 			*background:rgb(40,42,57);
-=======
->>>>>>> 744209bae077e578d2854e005c1f1872283bf315
 		}
 		.section2 .title{
 			position: relative;
@@ -40,7 +47,6 @@
 		}
 		.section2 .conten{
 			position: absolute;
-<<<<<<< HEAD
 			left: 50%;
 			top: 60%;
 			transform: translate(-50%,-50%);
@@ -57,29 +63,14 @@
 		}
 		.section2 .conten1 p,.conten2 p,.conten3 p,.conten4 p{
 			white-space: nowrap;
-=======
-			top:50%;
-			left: 18%;
-
-		}
-		.section2 .conten1,.conten2,.conten3,.conten4{
-			float: left;
-			padding-top: 180px;
-			width: 201px;
-			margin-right: 80px;
-			color: #fff;
->>>>>>> 744209bae077e578d2854e005c1f1872283bf315
 		}
 		.section2 .conten1 h3,.conten2 h3,.conten3 h3,.conten4 h3{
 			margin-top: 10px;
 			font-size: 23px;
 			font-weight: 100;
 			margin-bottom: 20px;
-<<<<<<< HEAD
 			padding-right: 40px;
 			white-space: nowrap;
-=======
->>>>>>> 744209bae077e578d2854e005c1f1872283bf315
 		}
 		.section2 .conten1{
 			background: url(../img/bg21.png) no-repeat top ;
@@ -101,7 +92,47 @@
 			*background:rgb(153,153,153);
 		}
 		.section4{
+			background: url(../img/bg-4.jpg) no-repeat;
+			background-size: cover;
+			
+		}
+		.section4 .contact {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left:-300px;
+			margin-top: -150px;
+			font-size: 18px;
+			font-weight: 400;
+			color:#fff;
+			}
+		.section4 .contact span {
+			float: right;
+			font-size: 16px;
+			font-weight: 100;
+			padding-right: 2em;
+		}
+		.section4 .contact1{
+			background: rgba(0, 0, 0, 0.8)!important;
 
+
+		}
+		.section4 .contact1 b{
+			display: block;
+			line-height: 55px;
+			text-indent: 4em;
+			background: url(../img/timg.png) no-repeat;
+
+		}
+		.section4 .contact1,.contact2,.contact3,.contact4,.contact5{
+			width: 600px;
+			text-indent: 3em;
+			height: 55px;
+			line-height: 55px;
+			background: rgba(0, 0, 0, 0.3);
+		}
+		.section4 .contact1:hover,.contact2:hover,.contact3:hover,.contact4:hover,.contact5:hover{
+			background: rgba(255, 255, 255, 0.5);
 		}
 		.ourheight{
 			height:100vh;
@@ -174,14 +205,3 @@
     top: 16px;
     opacity: 0; } }
 
-.section1 .box{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	text-align: center;
-}
-.section1 .box h1{
-	font-size: 24px;
-	margin:50px 0;
-}
