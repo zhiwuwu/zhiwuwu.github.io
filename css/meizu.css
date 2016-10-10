@@ -54,7 +54,7 @@ fieldset, img { border:none; margin:0;padding: 0;}
 	font-size: 16px;
 }
 .nav .nav_list .nav_list_children{
-	display: none;
+	
 }
 /*nav*/
 .home{
@@ -84,17 +84,66 @@ fieldset, img { border:none; margin:0;padding: 0;}
 #banner{
 	position: relative;
 	height: 480px;
+	overflow: hidden;
+}
+#banner .pre{
+	cursor:pointer;
+	position: absolute;
+	width: 30px;
+	height: 60px;
+	background: url(../mz/left-arrow.png) no-repeat center;
+	z-index: 200;
+	left: 30%;
+	top: 240px;
+}
+#banner .next{
+	cursor:pointer;
+	position: absolute;
+	width: 30px;
+	height: 60px;
+	background: url(../mz/right-arrow.png) no-repeat center;
+	z-index: 200;
+	right: 16%;
+	top: 240px;
+}
+#banner:hover .pre , #banner:hover .next{
+	background-color: rgba(0,0,0,0.5);
+}
+#banner .banner_box_wrap{
+	width: 99999px;
+}
+#banner .banner_box_wrap ul{
+	position: relative;
+	display: block;
+	left: 0px;
 }
 #banner .banner_box_wrap ul li{
-	position: absolute;
-	top: 0;
+	float: left;
 }
 #banner .banner_box_wrap ul li img{
 	max-width: 100%;
 	display: block;
 	height: 480px;
 }
-
+#banner .wrap_page{
+	position: absolute;
+	z-index: 200;
+	width: 996px;
+	top: 450px;
+	left: 50%;
+}
+#banner .wrap_page span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	margin-left: 5px;
+	border:1px solid silver;;
+}
+#banner .wrap_item{
+	background-color: #00c3f5;
+    border-color: #00c3f5;
+}
 .ad_box{
 	margin-top: 10px;
 }
@@ -136,16 +185,18 @@ fieldset, img { border:none; margin:0;padding: 0;}
 }
 
 .home_hot .home_hot_list{
+	position: relative;
 	margin-top: 20px;
 	margin-left: -1px;
 	border: 1px solid #bdbdbd;
 	overflow: hidden;
 }
-#home_hoy_box{
+#home_hot_box{
+	position: relative;
 	width: 2480px;
 	text-align: center;
 	margin-left:-1px;
-
+	left: 0px;
 }
 .home_hot .home_hot_list_item{
 	width: 10%;
