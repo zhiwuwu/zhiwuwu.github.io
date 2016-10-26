@@ -1,34 +1,106 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta charset="UTF-8">
-	<title>知兀屋</title>
-	<link rel="stylesheet" href="css/index.css">
-	<link href="favicon.ico" rel="shortcut icon">
+<meta charset="utf-8">
+<title>知兀屋</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/index.css">
+<link href="favicon.ico" rel="shortcut icon">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		continuousVertical: true,
+		'navigation': true,
+		slidesNavigation:true,
+		afterLoad: function(anchorLink, index){
+			if(index == 2){
+				$('.title').delay(500).fadeIn(2000);
+				$('.conten').delay(500).animate({
+					bottom: '8%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 3){
+				$('.section3').find('p').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+				$('#fp-nav').hide();
+				$('#mouse').hide();
+			}
+			if(index == 4){
+				$('.section4').find('p').fadeIn(2000);
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '2'){
+				$('.title').delay(500).fadeOut(2000);
+				$('.conten').delay(500).animate({
+					bottom: '-50%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '3'){
+				$('.section3').find('p').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+				$('#fp-nav').show();
+				$('#mouse').show();
+			}
+			if(index == '4'){
+				$('.section4').find('p').fadeOut(2000);
+			}
+		}
+	});
+	//响应式
+	$(window).resize(function(){
+        autoScrolling();
+    });
+
+    function autoScrolling(){
+        var $ww = $(window).width();
+        if($ww < 1024){
+            $.fn.fullpage.setAutoScrolling(false);
+        } else {
+            $.fn.fullpage.setAutoScrolling(true);
+        }
+    }
+    autoScrolling();
+
+			$('.box').find('.p1').delay(500).animate({
+				left: '0',
+			}, 1500, 'easeOutExpo');
+			$('.box').find('.p2').delay(500).animate({
+				right: '0',
+			}, 1500, 'easeOutExpo');
+			$('.box').find('h1').show(2000);
+});
+</script>
 </head>
+
 <body>
-	<div id="nav">
-		<ul>
-			<li><a href="">首页</a></li>
-			<li>|&nbsp;&nbsp;&nbsp;<a href="meizu.html" target="_blank">魅族商城</a></li>
-			<li>|&nbsp;&nbsp;&nbsp;<a href="">旅行路上</a></li>
-			<li>|&nbsp;&nbsp;&nbsp;<a href="">给我留个言</a></li>
-			<li class="resume">|&nbsp;&nbsp;&nbsp;<a href="">简历在这</a></li>
-		</ul>
-		<img src="img/logo.png" alt="logo">
-	</div>
-	<!-- 导航结束 -->
-	<div class="section1 ourheight">
+<div id="mynav">
+	<ul>
+		<li><a href="">首页</a></li>
+		<li>|&nbsp;&nbsp;&nbsp;<a href="meizu.html" target="_blank">魅族商城</a></li>
+		<li>|&nbsp;&nbsp;&nbsp;<a href="">旅行路上</a></li>
+		<li>|&nbsp;&nbsp;&nbsp;<a href="">给我留个言</a></li>
+		<li class="resume">|&nbsp;&nbsp;&nbsp;<a href="">简历在这</a></li>
+	</ul>
+	<img src="img/logo.png" alt="logo">
+</div>
+<div id="dowebok">
+	<div class="section section1">
 		<div class="box">
 			<h1>欢迎来到我的小屋</h1>
-			<p>本人擅长Ai、Fw、Fl、Br、Ae、</p>
-			<p>Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、</p>
-			<p>PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、python、Objective-C、</p>
-			<p>ActionScript、Pascal等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP8等系统的开关机。非诚勿扰。</p>
+			<p class="p1">本人擅长Ai、Fw、Fl、Br、Ae、</p>
+			<p class="p2">Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、</p>
+			<p class="p1">PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、python、Objective-C、</p>
+			<p class="p2">ActionScript、Pascal等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP8等系统的开关机。</p>
 			<p></p>
 		</div>
 	</div>
-	<div class="section2 ourheight">
+	<div class="section section2">
 		<div class="title">
 			<h2>[ 技能 ]</h2>
 			<span><img src="img/hou.png" alt=""></span>
@@ -60,11 +132,36 @@
 			</div>
 		</div>
 	</div>
-	<div class="section3 ourheight">
-		<h1>page3</h1>
-	</div>
-	<div class="section4 ourheight">
+	<div class="section section3">
+		<div class="slide">
+			<div class="aboutme">
+				<h3>关于我<br><i>about me</i></h3>
+				<ul>
+					<li><img src="img/xueli.png" alt="" />统招本科</li>
+					<li><img src="img/xingbie.png" alt="" />24岁</li>
+					<li><img src="img/weizhi.png" alt="" />杭州</li>
+					<li><img src="img/qiuzhi.png" alt="" />求职中</li>
+				</ul>
+				<div class="describe">
+					<p>本人2016年6月底毕业于湖南商学院电子商务专业，目前在杭州</p>
+					<p>在校期间曾经为帮同学重装系统在网上扒教程2个小时搞定电脑重装，从此走上“修电脑修手机的不归路”</p>
+					<p>由于自学能力不错，而且爱折腾，毕业后间接性的学习前端</p>
+					<p>最能能吸引我的就是前端这层出不穷的新极速（虽然现在我只是个小白）</p>
+					<p>怀着对代码的热情以及那份对专研的执着从一个电商狗向码农转变</p>
 
+					<p>其实转行做码农有一个故事，想听吗？</p>
+
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<h3>第二屏的第二屏</h3>
+		</div>
+		<div class="slide">
+			<h3>第二屏的第三屏</h3>
+		</div>
+	</div>
+	<div class="section section4">
 		<div class="contact">
 			<!-- 在自学荒原上跋涉的非科班学生 -->
 			<div class="contact1"><b>联系我</b></div>
@@ -74,8 +171,7 @@
 			<div class="contact5">QQ<span>510136920</span></div>
 		</div>
 	</div>
-	<!-- 内容结束 -->
-	<div id="mouse"><div class="wheel"></div></div>
-	<script src="js/index.js"></script>
+</div>
+<div id="mouse"><div class="wheel"></div></div>
 </body>
 </html>
