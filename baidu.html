@@ -31,7 +31,16 @@
         querySUG(url);
       });
       $('.s_btn').click(tiaozhuan);
-
+      console.log($(".kw").val()!='');
+      $(document).keydown(function(event){
+        if ($(".kw").val()!='') {
+          console.log(11);
+          if (event.keyCode == 13) {
+            console.log(1123);
+            tiaozhuan();
+          }
+        }
+      });
     });
     function tiaozhuan() {
         var seach = $('.kw').val();
@@ -47,7 +56,6 @@
       dataType : "jsonp",
       jsonp: "cb",
       success : function(data){
-        console.log(data);
         var tag = "<ul>";
         for(var i=0;i<data.s.length;i++){
           tag += '<li>'+data.s[i]+'</li>';
