@@ -74,7 +74,15 @@ $(function(){
 				right: '0',
 			}, 1500, 'easeOutExpo');
 			$('.box').find('h1').show(2000);
-});
+			//tab 选项卡的代码
+	$(".tab li").mouseenter(function(){
+                var $this = $(this),
+                    index = $this.index();
+                $this.addClass("active").siblings("li").removeClass("active");
+                $(".products div").eq(index).addClass("selected").siblings("div").removeClass("selected");
+							})
+}
+);
 </script>
 </head>
 
@@ -148,17 +156,49 @@ $(function(){
 					<p>由于自学能力不错，而且爱折腾，毕业后间接性的学习前端</p>
 					<p>最能能吸引我的就是前端这层出不穷的新极速（虽然现在我只是个小白）</p>
 					<p>怀着对代码的热情以及那份对专研的执着从一个电商狗向码农转变</p>
-
 					<p>其实转行做码农有一个故事，想听吗？</p>
-
 				</div>
 			</div>
 		</div>
 		<div class="slide">
-			<h3>第二屏的第二屏</h3>
+			<div class="wrapper">
+        <ul class="tab">
+					<li class="tab-item active">主页介绍</li>
+					<li class="tab-item">魅族商城</li>
+					<li class="tab-item">百度两下</li>
+					<li class="tab-item">bootstrap</li>
+        </ul>
+        <div class="products">
+            <div class="main selected">
+                <p>主要采用Jquery + Jqueryfullpage插件进行开发 </p>
+								<p>由于是主页所以有一些css3的样式在里面比较美观</p>
+								<p>分竖直方向滚动和水平方向，水平的就是你看到的这个</p>
+								<p>第一屏是欢迎语第二屏是自己做的一些ps图片和技能介绍</p>
+								<p>第三屏是相文字描述比较多一点，第四屏是本人联系方式</p>
+            </div>
+            <div class="main">
+                <p>魅族的设计是本人比较喜欢的风格，同时也是魅族用户</p>
+								<p>仿一个他们的商城，其中遇到很多问题都是自己网上查找debug</p>
+								<p>这个页面是采用原生html、css、javascript写的</p>
+								<p>写这个的过程中遇到新手所遇到的很多基本问题</p>
+								<p>比如/* ；*/和/* ; */还有/* ｝ */和/* } */ 大家都懂的</p>
+            </div>
+            <div class="main">
+                <p>在学到了ajax了解到百度搜索的机制</p>
+								<p>学着去扒他们的搜索api接口，是使用jsonp的形式传送的</p>
+								<p>仿着做了个只有搜索的input在中间</p>
+								<p>实现搜索智能提示点击跳转百度搜索和enter跳转</p>
+            </div>
+            <div class="main">
+                <p>bootstrap是一个响应式是UI框架，所以也有所研究</p>
+								<p>它是整合了jquery和html5以及css3的特点用于快速开发</p>
+								<p>准备用它仿一个网页出来</p>
+            </div>
+        </div>
+    </div>
 		</div>
 		<div class="slide">
-			<h3>第二屏的第三屏</h3>
+			<h3 style="	text-align: center;">开发中</h3>
 		</div>
 	</div>
 	<div class="section section4">

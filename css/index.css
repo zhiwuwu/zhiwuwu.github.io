@@ -155,6 +155,59 @@ text-align: center;
   color: #fff;
   font-size: 5em
 }
+.section3 .wrapper{
+	position: relative;
+	transform: translate(-50%,0%);
+	display: table;
+	table-layout: fixed;
+	left: 50%;
+	color:#2b475e;
+}
+.section3	.wrapper{
+	width:500px;
+	height: 200px;
+}
+.section3	.tab{
+	border:1px solid #ddd;
+	border-bottom: 0;
+	height: 36px;
+	width: 100%;
+}
+.section3	.tab li{
+	position: relative;
+	float: left;
+	width: 25%;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	cursor: pointer;
+}
+.section3	.products{
+	width: 500px;
+	border:1px solid #ddd;
+	height: 200px;
+	background: #fff;
+	margin-top: -4px;
+	z-index: 10;
+}
+.section3	.products .main{
+	float: left;
+	display: none;
+}
+.section3	.products .main p{
+	padding-top: 10px;
+	text-indent: 2em;
+}
+.section3	.products .main.selected{
+	display: block;
+
+}
+.section3	.tab li.active{
+	border-color: red;
+	border-bottom: 0;
+	background: #fff;
+}
+
 .section4{
 	background: url(../img/bg-4.jpg) no-repeat center;
 	background-size: cover;
