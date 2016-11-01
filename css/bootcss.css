@@ -1,6 +1,12 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 }
+#btn{
+  border-color: #ddd;
+}
+#btn span{
+  background-color: #888;
+}
 .logo{
   padding: 5px 0 0 !important;
 }
